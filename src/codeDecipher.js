@@ -3,7 +3,7 @@ const answerJsonFile = '../answer.json';
 const answerData = fs.readFileSync(answerJsonFile, 'utf8');
 const { cifrado, numero_casas } = JSON.parse(answerData);
 
-console.log(codeDecipher(cifrado, numero_casas));
+//console.log(codeDecipher(cifrado, numero_casas));
 
 function codeDecipher(cipher, number_houses){
    
@@ -21,4 +21,10 @@ function codeDecipher(cipher, number_houses){
    }
    return decipheredCode;
 }
+
+module.exports = function getDicipheredCode() {
+   return codeDecipher(cifrado, numero_casas);
+}
+
+
 
