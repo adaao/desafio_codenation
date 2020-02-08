@@ -1,4 +1,3 @@
-const fs = require('fs');
 const request = require('axios');
 const token = require('../../token.json');
 const generateJsonFile = require('./generateJsonFile');
@@ -18,5 +17,3 @@ function generateAnswerJsonFromHttpRequest(url){
          console.log(error);
       });
 }
-
-
